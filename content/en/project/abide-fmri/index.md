@@ -51,7 +51,6 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
 
 
-
 ### Tools
 
 This project will rely on the following tools:
@@ -84,7 +83,7 @@ Visualizations:
 ### Progress overview
 The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
 
-We wrote a python script which served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the data, and then implemented different models and cross-validation techniques which are describe in further detail below. 
+We wrote a python script which served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the data. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
 
 
 ### Tools we learned during this project
