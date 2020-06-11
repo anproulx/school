@@ -83,7 +83,7 @@ Visualizations:
 ### Progress overview
 The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
 
-We wrote a python script which served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the data. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
+We wrote a python script which served to standardize the fMRI data preparation for the machine learning. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the functional data. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
 
 
 ### Tools we learned during this project
@@ -127,9 +127,7 @@ This script
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
 * [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
 
-#### Deliverable 4: Presentation
-
-[presentation](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation)
+#### Deliverable 4: [presentation](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation)
 
 
 ## Conclusion and acknowledgement
@@ -162,4 +160,3 @@ A special thank you to all the 2020 BrainHack School organizers for making this 
 Anderson, J. S., Patel, V. B., Preedy, V. R., & Martin, C. R. (2014). Cortical underconnectivity hypothesis in autism: evidence from functional connectivity MRI. Comprehensive guide to autism, 1457, 1471.
 
 Nielsen, J. A., Zielinski, B. A., Fletcher, P. T., Alexander, A. L., Lange, N., Bigler, E. D., ... & Anderson, J. S. (2013). Multisite functional connectivity MRI classification of autism: ABIDE results. Frontiers in human neuroscience, 7, 599.
-
