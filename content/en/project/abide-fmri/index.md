@@ -88,11 +88,11 @@ We wrote a python script which served to prepare the fMRI data for the machine l
 
 ### Tools we learned during this project
 
- * **Python librairies** Nilearn, Matplotlib, Plotly, Sklearn (dimensionality reduction, test-train split, gridsearch, cross-validation methods, evaluate performance)
- * **Github workflow-** Push, pull, fork, merge, pull requests, issues, etc. Also learned team management and organization.
- * **Venv** Make requirement.txt file
- * **Git**  Track files such as Jupyter Notebook
- * **Machine learning** Concepts & tools for applications of machine learning to the neuroimaging field 
+ * **Python librairies:** Nilearn, Matplotlib, Plotly, Sklearn (dimensionality reduction, test-train split, gridsearch, cross-validation methods, evaluate performance)
+ * **Github workflow:** Push, pull, fork, merge, pull requests, issues, etc. Also learned team management and organization.
+ * **Venv:** Make requirement.txt file
+ * **Git:**  Track files such as Jupyter Notebook
+ * **Machine learning:** Concepts & tools for applications of machine learning to the neuroimaging field 
 
 ### Results
 
