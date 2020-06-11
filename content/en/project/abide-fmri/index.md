@@ -40,13 +40,13 @@ When joining the BrainHack School, I was looking forward in particular to workin
 You can find me on GitHub at [emilyemchen](https://github.com/emilyemchen) and on Twitter at [@emilyemchen](https://twitter.com/emilyemchen).
 
 #### Andréanne
-I am a Master's student in Psychology currently enrolled at the University of Montreal. My career objective is to work on research projects aiming to discover new ways of characterizing the brain in its pathological states. At the moment, I am working with Sébastien Jacquemont and Pierre Bellec, and the focus of our research is investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More precisely, I have been working with resting-state functional connectivity measures in carrier populations.
+Hi! I am a student in Cognitive Neuroscience recently enrolled in a Master's in Psychology at the University of Montreal. My career objective is to work on research projects aiming to discover new ways of characterizing the brain in its pathological states. At the moment, I am working with Sébastien Jacquemont and Pierre Bellec, and the focus of our research is investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More precisely, I have been working with resting-state functional connectivity measures in carrier populations.
 
-By joining the Brainhack School, I hoped to strengthen my computational skills and my knowledge of the applications of machine learning (more specifically to the field of neuroimaging). Not only did I get to work on a cool project, but I also learned about useful tools such as Github. More importantly, I also met a community of brilliant/aware researchers and got to collaborate with other students across the world!
+By joining the Brainhack School, I hoped to strengthen my computational skills and my knowledge in the applications of machine learning (more specifically to the field of neuroimaging). Not only did I get to work machine learning project, but I also got to learn about useful tools such as Github. More importantly, I also met a community of brilliant/aware researchers and got to collaborate with other students across the world!
 
 #### Mikkel
 
-## Project background
+#### Project background
 
 Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
 
@@ -63,7 +63,7 @@ This project will rely on the following tools:
  - Docker
  
 ### Data
-For the purpose of this project, we used the preprocessed open source database ABIDE (see Preprocessed Connectomes Project), available through Nilearn. This data contains structural, functional and phenotypic data of 539 individuals with autism and 573 typical controls.
+For the purpose of this project, we used the preprocessed open source database ABIDE (see Preprocessed Connectomes Project), available through Nilearn. This data contains structural, functional and phenotypic data of 539 individuals with autism and 573 typical controls. We will be using the preprocessed fMRI data as well as the information regarding diagnosis.
 
 ### Deliverables
 
@@ -82,46 +82,85 @@ Visualizations:
 ## Results
 
 ### Progress overview
-The first part of this project consisted of exploring different ways that we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) a python script for standardized data preparation, 2) machine learning and 3) presentation. 
+The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
 
-The python script served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members used that python script to then branch of in different Jupyter notebooks and implement different models and cross-validation techniques.
+We wrote a python script which served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the data, and then implemented different models and cross-validation techniques which are describe in further detail below. 
 
 
-### Tools I learned during this project
+### Tools we learned during this project
 
- * **Meta-project** P Bellec learned how to do a meta project for the first time, which is developping a framework while using it at the same time. It felt really weird, but somehow quite fun as well.
- * **Github workflow-** The project allowed us to learn about Github's .
- * **Project content** Through the project reports generated using the template, it is possible to learn about what exactly the brainhack school students are working on.
+ * **Python librairies** Nilearn, Matplotlib, Plotly, Sklearn (dimensionality reduction, test-train split, gridsearch, cross-validation methods, evaluate performance)
+ * **Github workflow-** Push, pull, fork, merge, pull requests, issues, etc. Also learned team management and organization.
+ * **Venv** Make requirement.txt file
+ * **Git**  Track files such as Jupyter Notebook
+ * **Machine learning** Concepts & tools for applications of machine learning to the neuroimaging field 
 
 ### Results
 
-#### Deliverable 1: report template
+#### Deliverable 1: Jupyter notebooks
 
-You are currently reading the report template! I will let you judge whether it is useful or not. If you think there is something that could be improved, please do not hesitate to open an issue [here](https://github.com/brainhack-school2020/project_template/issues) and let us know.
+##### Leave-site-out cross-validation
 
-#### Deliverable 2: project gallery
+[*`leave-site-out-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/leave-site-out-cv_classifier.ipynb)
 
-There is not yet a project gallery, as BHS 2020 is the first edition that will incorporate it on the website. You can still check out the [2019 BHS github organization](https://github.com/mtl-brainhack-school-2019)
+This notebook contains code to run a linear support vector classification to predict autism from resting state data. It uses leave-group-out cross-validation using site as the group variable. The results give a good estimate of how stable the model is. While for most of the sites the prediction works above chance level, for some, autism is predicted only at or even below chance level.
 
-##### ECG pupilometry pipeline by Marce Kauffmann
+##### K-fold and leave-one-out cross-validation
+[*`kfold_LeaveOneOut_cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/kfold_LeaveOneOut_cv_classifier.ipynb)
 
-The repository of this project can be found [here](https://github.com/mtl-brainhack-school-2019/ecg_pupillometry_pipeline_kaufmann). The objective was to create a processing pipeline for ECG and pupillometry data. The motivation behind this task is that Marcel's lab (MIST Lab @ Polytechnique Montreal) was conducting a Human-Robot-Interaction user study. The repo features:
- * a [video introduction](http://www.youtube.com/watch/8ZVCNeX42_A) to the project.
- * a presentation [made in a jupyter notebook](https://github.com/mtl-brainhack-school-2019/ecg_pupillometry_pipeline_kaufmann/blob/master/BrainHackPresentation.ipynb) on the results of the project.
- * Notebooks for all analyses.
- * Detailed requirements files, making it easy for others to replicate the environment of the notebook.
- * An overview of the results in the markdown document.
+This notebook contains the code to run support vector classification, k neirest neighbors, decision tree and random forest on the Abide dataset. The models are trained and evaluated using k-fold and leave-one out cross-validation methods. We obtain accuracy scores that represent how skilled the model is at predicting the labels of unseen data.  Leave-ont out cross validation gives more accurate predictions than kfold cross validation. The accuracy values range from 55.8% to 69.2%.
 
-##### Other projects
-Here are other good examples of repositories:
-- [Learning to manipulate biosignals with python](https://github.com/mtl-brainhack-school-2019/franclespinas-biosignals) by François Lespinasse
-- [Run multivariate anaylysis to relate behavioral and electropyhysiological data](https://github.com/mtl-brainhack-school-2019/PLS_PV_Behaviour)
-- [PET pipeline automation and structural MRI exploration](https://github.com/mtl-brainhack-school-2019/rwickens-sMRI-PET) by Rebekah Wickens
-- [Working with PSG [EEG] data from Parkinson's patients](https://github.com/mtl-brainhack-school-2019/Soraya-sleep-data-in-PD-patients) by Cryomatrix
-- [Exploring Brain Functional Activation in Adolescents Who Attempted Suicide](https://github.com/mtl-brainhack-school-2019/Anthony-Gifuni-repo) by Anthony Gifuni
+#####
 
-#### Deliverable 3: Instructions
- 
+#### Deliverable 2: [*`prepare_data.py`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py)
+
+This script
+
+* downloads the data
+* extracts the time series of 64 regions of interest defined by the BASC brain atlas
+* computes the correlations between time series for each participant
+* uses a principal component analysis for dimensionality reduction
+
+
+
+#### Deliverable 3: Visualization
+* [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
+* [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
+* [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
+
+#### Deliverable 4: Presentation
+
+[presentation](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation)
+
 
 ## Conclusion and acknowledgement
+A special thank you to all the 2020 BrainHack School organizers for making this event an amazing and eye opening learning experience!
+
+ - Pierre Bellec (Mentor)
+ - Désirée Lussier-Lévesque (Mentor)
+ - Alexa Pichet-Binette (Mentor)
+ - Sebastian Urchs (Mentor)
+ - Jean-Baptiste Poline
+ - Tristan Glatard
+ - Benjamin de Leener
+ - Elizabeth DuPre
+ - Ross Markello
+ - Peer Herholz
+ - Samuel Guay
+ - Valerie Hayot-Sasson
+ - Karim Jerbi
+ - Greg Kiar
+ - Jake Vogel
+ - Agâh Karakuzu
+ 
+## References
+
+1. Choosing appropriate estimators with scikit-learn https://scikit-learn.org/stable/tutorial/machine_learning_map/
+2. Benchmarking functional connectome-based predictive models for resting-state fMRI (for classification estimator inspiration) https://hal.inria.fr/hal-01824205
+3. Getting the data using nilearn fetch https://nilearn.github.io/modules/generated/nilearn.datasets.fetch_abide_pcp.html
+4. Python Data Science Handbook GitHub and website https://github.com/jakevdp/PythonDataScienceHandbook
+
+Anderson, J. S., Patel, V. B., Preedy, V. R., & Martin, C. R. (2014). Cortical underconnectivity hypothesis in autism: evidence from functional connectivity MRI. Comprehensive guide to autism, 1457, 1471.
+
+Nielsen, J. A., Zielinski, B. A., Fletcher, P. T., Alexander, A. L., Lange, N., Bigler, E. D., ... & Anderson, J. S. (2013). Multisite functional connectivity MRI classification of autism: ABIDE results. Frontiers in human neuroscience, 7, 599.
 
