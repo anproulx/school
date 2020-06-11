@@ -31,7 +31,7 @@ image: "project_abideteam.png"
 
 ### Background
 
-Several studies have found lower functional connectivity in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
+Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
 
 
 
@@ -65,12 +65,12 @@ Visualizations:
 
 ### Progress overview
 
-The project was swiftly initiated by P Bellec, based on the existing template created in 2019 by Tristan Glatard and improved by different students. It was really not that hard. Community feedback is expected to lead to rapid further improvements of this first version.
+This project was defined througout the second week based on the common learning goals and our complementary expertises. We started by exploring different ways that we could organize our project using Github. Our work as a team consisted of 4 main sections; the script for standardized data preparation, the machine learning and the presentation. 
 
 ### Tools I learned during this project
 
  * **Meta-project** P Bellec learned how to do a meta project for the first time, which is developping a framework while using it at the same time. It felt really weird, but somehow quite fun as well.
- * **Github workflow-** The successful use of this template approach will demonstrate that it is possible to incorporate dozens of students presentation on a website collaboratively over a few weeks.
+ * **Github workflow-** The project allowed us to learn about Github's .
  * **Project content** Through the project reports generated using the template, it is possible to learn about what exactly the brainhack school students are working on.
 
 ### Results
@@ -102,8 +102,6 @@ Here are other good examples of repositories:
 
 #### Deliverable 3: Instructions
  
- To be made available soon.
 
 ## Conclusion and acknowledgement
 
-The BHS team hope you will find this template helpful in documenting your project. Developping this template was a group effort, and benefitted from the feedback and ideas of all BHS students over the years.
