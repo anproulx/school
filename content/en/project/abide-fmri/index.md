@@ -15,7 +15,7 @@ website:
 
 # List +- 4 keywords that best describe your project within []. Note that the project summary also involves a number of key words. Those are listed on top of the [github repository](https://github.com/brainhack-school2020/project_template), click `manage topics`.
 # Please only lowercase letters
-tags: [machine learning, fMRI, open science, brainhack]
+tags: [machine learning, fMRI, autism, open science]
 
 # Summarize your project in < ~75 words. This description will appear at the top of your page and on the list page with other projects..
 
@@ -31,6 +31,23 @@ image: "project_abideteam.png"
 
 ### Background
 
+#### Emily 
+
+Hello! I am an (incoming) fourth year undergraduate student at McGill University studying computer science and urban health geography with a minor in cognitive science. I am a research assistant with Isabelle Arseneau-Bruneau in the Zatorre Lab and have been learning a lot about neuroscience research while (hopefully) lending some of my technical skills to Isabelle's PhD work exploring the effect of musical training on FFR. 
+
+When joining the BrainHack School, I was looking forward in particular to working on a project at the intersection of neuroscience and CS because my previous classes rarely focused on the application of the abstract concepts we learned. Upon completion of the BrainHack School, I had the opportunity to learn from and collaborate with talented neuroscience researchers and participants, write a machine learning script using python and neuroscience data, and gain hands-on practice in reproducibility efforts and good project management. 
+
+You can find me on GitHub at [emilyemchen](https://github.com/emilyemchen) and on Twitter at [@emilyemchen](https://twitter.com/emilyemchen).
+
+#### Andréanne
+I am a Master's student in Psychology currently enrolled at the University of Montreal. My career objective is to work on research projects aiming to discover new ways of characterizing the brain in its pathological states. At the moment, I am working with Sébastien Jacquemont and Pierre Bellec, and the focus of our research is investigating the effect of genetic mutations on fonctional and structural brain phenotypes. More precisely, I have been working with resting-state functional connectivity measures in carrier populations.
+
+By joining the Brainhack School, I hoped to strengthen my computational skills and my knowledge of the applications of machine learning (more specifically to the field of neuroimaging). Not only did I get to work on a cool project, but I also learned about useful tools such as Github. More importantly, I also met a community of brilliant/aware researchers and got to collaborate with other students across the world!
+
+#### Mikkel
+
+## Project background
+
 Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
 
 
@@ -43,6 +60,7 @@ This project will rely on the following tools:
  - Git
  - Github
  - Venv
+ - Docker
  
 ### Data
 For the purpose of this project, we used the preprocessed open source database ABIDE (see Preprocessed Connectomes Project), available through Nilearn. This data contains structural, functional and phenotypic data of 539 individuals with autism and 573 typical controls.
@@ -64,8 +82,10 @@ Visualizations:
 ## Results
 
 ### Progress overview
+The first part of this project consisted of exploring different ways that we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) a python script for standardized data preparation, 2) machine learning and 3) presentation. 
 
-This project was defined througout the second week based on the common learning goals and our complementary expertises. We started by exploring different ways that we could organize our project using Github. Our work as a team consisted of 4 main sections; the script for standardized data preparation, the machine learning and the presentation. 
+The python script served to prepare the fMRI data for the machine learning in a standardized way. Each of the team members used that python script to then branch of in different Jupyter notebooks and implement different models and cross-validation techniques.
+
 
 ### Tools I learned during this project
 
