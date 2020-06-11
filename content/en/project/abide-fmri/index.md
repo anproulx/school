@@ -2,28 +2,28 @@
 type: "project" # DON'T TOUCH THIS ! :)
 date: "2020-05-16" # Date you first upload your project.
 # Title of your project (we like creative title)
-title: "This is an example project page which serves as a template"
+title: "How accuratly can we predict autism from fMRI data?"
 
 # List the names of the collaborators within the [ ]. If alone, simple put your name within []
-names: [Samuel Guay, Pierre Bellec]
+names: [Emily Chen, Andréanne Proulx, Mikkel Schöttner]
 
 # Your project GitHub repository URL
-github_repo: https://github.com/brainhack-school2020/project_template
+github_repo: https://github.com/brainhack-school2020/abide-fmri
 
 # If you are working on a project that has website, indicate the full url including "https://" below or leave it empty.
 website:
 
 # List +- 4 keywords that best describe your project within []. Note that the project summary also involves a number of key words. Those are listed on top of the [github repository](https://github.com/brainhack-school2020/project_template), click `manage topics`.
 # Please only lowercase letters
-tags: [project, github, markdown, brainhack]
+tags: [machine learning, fMRI, open science, brainhack]
 
 # Summarize your project in < ~75 words. This description will appear at the top of your page and on the list page with other projects..
 
-summary: "Each project repository should have a markdown file explaining the background and objectives of the project, as well as a summary of the results, and links to the different deliverables of the project. Project reports are incorporated in the BHS [website](https://school.brainhackmtl.org/project)."
+summary: "In this project, we set out to compare different classfication algorithms and cross-validation methods to see how well each one was able to predict autism diagnosis from the resting-state fMRI data in the ABIDE dataset."
 
 # If you want to add a cover image (listpage and image in the right), add it to your directory and indicate the name
 # below with the extension.
-image: "bhs2020.png"
+image: "project_abideteam.png"
 ---
 <!-- This is an html comment and this won't appear in the rendered page. You are now editing the "content" area, the core of your description. Everything that you can do in markdown is allowed below. We added a couple of comments to guide your through documenting your progress. -->
 
@@ -31,26 +31,36 @@ image: "bhs2020.png"
 
 ### Background
 
-Inspired by the [Recurse Centre](https://www.recurse.com/) initiative (formally known as the "hacker school"), Brainhack School was established in 2018 with the mission to train students from a multidisciplinary backgrounds to a panoply of reproducible tools for neural data science, using a project-based approach. Following an initial 3-weeks long pilot, a 4th week was added with an intensive bootcamp, so that students could choose what tools to learn more deeply in their projects. As the course became integrated in standard curriculum at different universities, the formula seemed to be working. In order to streamline the different stages of the project, some standard template and milestones were needed, which needed to be incorporated in a github-based workflow. The "project template" project (which is also our first BHS meta-project) aims at establishing such a standardized template. You can check the following [video](https://youtu.be/PTYs_JFKsHI) where Pierre Bellec gives an overview of the Brainhack school.
+Several studies have found lower functional connectivity in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
+
+
 
 ### Tools
 
-The "project template" project will rely on the following technologies:
- * Markdown, to structure the text.
- * The Hugo website framework which is used by the BHS website. This makes it possible to easily add the markdown project description to the website.
- * Adding the project to the website relies on github, through pull requests.
-
+This project will rely on the following tools:
+ - Jupyter Notebook
+ - Python libraries: Scikit-learn, Nilearn, Seaborn, Matplotlib, Pyplot
+ - Git
+ - Github
+ - Venv
+ 
 ### Data
-
-Ultimately, the project template will be used by all BHS participants. Data on the different projects will be aggregareted on the [following page](https://school.brainhackmtl.org/project). This will serve as an additional example gallery in the years to come for future brainhack school students. Many reports from [BHS 2019](https://github.com/mtl-brainhack-school-2019) already used this template.
+For the purpose of this project, we used the preprocessed open source database ABIDE (see Preprocessed Connectomes Project), available through Nilearn. This data contains structural, functional and phenotypic data of 539 individuals with autism and 573 typical controls.
 
 ### Deliverables
 
 At the end of this project, we will have:
- - The current markdown document, completed and revised.
- - A gallery of the student projects at Brainhack 2020.
- - Instructions on the website about how to submit a pull request to the [brainhack school website](https://github.com/BrainhackMTL/school) in order to add the project description to the website.
-
+ - A python script 
+ - 3 Jupyter Notebooks, each containing the code for different cross-validation methods
+ - Requirement.txt file
+ - README file
+ 
+Presentation:
+ - Jupyter Notebook (presentation.ipynb)
+ 
+Visualizations: 
+ - Links to Plotly visualization
+ 
 ## Results
 
 ### Progress overview
