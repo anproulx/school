@@ -76,7 +76,7 @@ Presentation:
  - Jupyter Notebook (presentation.ipynb)
  
 Visualizations: 
- - Links to Plotly visualization
+ - Links to Plotly visualizations
  
 ## Results
 
