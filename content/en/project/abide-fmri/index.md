@@ -50,6 +50,19 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 
 Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project's scientific aim is to replicate these findings.
 
+### Becoming a Team 
+The three of us joined forces when we realized that we shared many similar learning goals and interests. With such similar project ideas, we figured we would accomplish more working together by each taking on a different cross-validation methods to train various machine learning models. 
+
+
+### Team Project Management
+
+We all shared a common interest in making our project as reproducible as possible. This goal meant creating a transparent, collaborative workflow that could be tracked at any time by anyone. To achieve this objective, we utilized the many features that GitHub has to offer, all of which you can see in action at our shared repository [here](https://github.com/brainhack-school2020/abide-fmri).
+* **Branches:** used to simultaneously on our own parts and then push changes to the master branch
+* **Pull requests:** created when making changes to the master branch
+* **Issues:** used to communicate with each other and keep track of tasks
+* **Tags:** used to keep issues organized
+* **Milestones:** used to keep our main goals in mind (Week 4 presentation and final deliverable)
+* **Projects:** used to track various aspects of our work 
 
 ### Tools
 
@@ -110,7 +123,9 @@ This notebook contains code to run a linear support vector classification to pre
 
 This notebook contains the code to run support vector classification, k neirest neighbors, decision tree and random forest on the Abide dataset. The models are trained and evaluated using k-fold and leave-one out cross-validation methods. We obtain accuracy scores that represent how skilled the model is at predicting the labels of unseen data.  Leave-ont out cross validation gives more accurate predictions than kfold cross validation. The accuracy values range from 55.8% to 69.2%.
 
-#####
+##### Group k-folds cross-validation
+
+[*`group-kfolds-cv_classifier.ipynb`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/group-kfolds-cv_classifier.ipynb)
 
 ![Results cross-validation methods](result_cv.png)
 
@@ -123,15 +138,45 @@ This script
 * computes the correlations between time series for each participant
 * uses a principal component analysis for dimensionality reduction
 
+To fetch and prepare the data set you can call the `prepare_data.py` script like this:
 
-#### Deliverable 3: Visualization
+`./prepare_data.py data_dir output_dir`
+
+or alternatively:
+
+`python prepare_data.py data_dir output_dir`
+
+where
+* `data_dir` is the directory where you want to save the data or have it already saved and
+* `output_dir` is the directory where you want to store the outputs the script generates.
+
+The notebooks also call the `prepare_data` function from the preparation script.
+
+#### Deliverable 3: Visualizations
 * [Emily's GitHub Repository](https://github.com/emilyemchen/bhs2020-dataviz)
 * [Andréanne's GitHub Repository](https://github.com/brainhack-school2020/anproulx-fMRI-autism)
 * [Mikkel's GitHub Repository](https://github.com/brainhack-school2020/mschoettner_fMRI-ML), [link to the plot](https://mschoettner.github.io/brainhack_visualization/)
 
-#### Deliverable 4: [presentation](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation)
+#### Deliverable 4: Presentation
 
+The presentation slides can be viewed [here](https://www.canva.com/design/DAD-ByEQaXI/QLgHbYgnKd-xDWJXVnaGDA/view) on Canva, which is the platform we used to create the slides. A video of our presentation can be viewed on this project page. We presented our work to the BrainHack School on June 5, 2020 using the RISE integration in a Jupyter notebook, which can be found [here](https://github.com/brainhack-school2020/abide-fmri/tree/master/presentation). 
 
+#### Deliverable 5: Documentation
+ [`README.md`](https://github.com/brainhack-school2020/abide-fmri/blob/master/README.md) 
+ 
+ [`requirements.txt`](https://github.com/brainhack-school2020/abide-fmri/blob/master/requirements.txt) 
+
+This file increases reproducibility by helping to ensure that the scripts run correctly on any machine. To make sure that all scripts work correctly, you can create a virtual environment using pythons built-in library `venv`. To do this, follow these steps:
+
+1. Clone repo and navigate to folder in a shell
+2. Create a virtual environment in a folder of your choice: `python -m venv /path/to/folder`
+3. Activate it (bash command, see [here](https://docs.python.org/3/library/venv.html) how to activate in different shells): `source /path/to/folder/bin/activate`
+4. Install all necessary requirements from requirements file: `pip install -r requirements.txt`
+5. Create kernel for jupyter notebooks: `ipython kernel install --user --name=abide-ml`
+6. Open a jupyter notebook: `jupyter-notebook`, then click the notebook you want to run
+7. Select different kernel by clicking *Kernel -> Change Kernel -> abide-ml*
+8. Run the code!
+ 
 ## Conclusion and acknowledgement
 A special thank you to all the 2020 BrainHack School organizers for making this event an amazing and eye opening learning experience!
 
