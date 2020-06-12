@@ -62,6 +62,7 @@ This project will rely on the following tools:
  - Docker
  
 ### Data
+
 For the purpose of this project, we used the preprocessed open source database ABIDE (see Preprocessed Connectomes Project), available through Nilearn. This data contains structural, functional and phenotypic data of 539 individuals with autism and 573 typical controls. We will be using the preprocessed fMRI data as well as the information regarding diagnosis.
 
 ### Deliverables
@@ -81,7 +82,7 @@ Visualizations:
 ## Results
 
 ### Progress overview
-The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three main parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
+The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three main elements: 1) standardized data preparation, 2) machine learning and 3) presentation. 
 
 We wrote a python script to standardize the fMRI data preparation before the machine learning. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the functional data from the ABIDE dataset. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
 
