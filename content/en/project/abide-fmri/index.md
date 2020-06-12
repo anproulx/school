@@ -48,7 +48,7 @@ By joining the Brainhack School, I hoped to strengthen my computational skills a
 
 #### Project background
 
-Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project aims to replicate these findings.
+Several studies have found functional connectivity profil in the default mode network in people with ASD (Anderson, 2014). Based on these findings, rs-fMRI data have been used to predict autism by training a classifier on the multi-site ABIDE data set (Nielsen et al., 2013). This project's scientific aim is to replicate these findings.
 
 
 ### Tools
@@ -81,9 +81,9 @@ Visualizations:
 ## Results
 
 ### Progress overview
-The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
+The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three main parts: 1) standardized data preparation, 2) machine learning and 3) presentation. 
 
-We wrote a python script which served to standardize the fMRI data preparation for the machine learning. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the functional data. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
+We wrote a python script to standardize the fMRI data preparation before the machine learning. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the functional data from the ABIDE dataset. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
 
 
 ### Tools we learned during this project
@@ -111,6 +111,8 @@ This notebook contains the code to run support vector classification, k neirest 
 
 #####
 
+![Results cross-validation methods](result_cv.png)
+
 #### Deliverable 2: [*`prepare_data.py`*](https://github.com/brainhack-school2020/abide-fmri/blob/master/code/prepare_data.py)
 
 This script
@@ -119,7 +121,6 @@ This script
 * extracts the time series of 64 regions of interest defined by the BASC brain atlas
 * computes the correlations between time series for each participant
 * uses a principal component analysis for dimensionality reduction
-
 
 
 #### Deliverable 3: Visualization
@@ -156,6 +157,8 @@ A special thank you to all the 2020 BrainHack School organizers for making this 
 2. Benchmarking functional connectome-based predictive models for resting-state fMRI (for classification estimator inspiration) https://hal.inria.fr/hal-01824205
 3. Getting the data using nilearn fetch https://nilearn.github.io/modules/generated/nilearn.datasets.fetch_abide_pcp.html
 4. Python Data Science Handbook GitHub and website https://github.com/jakevdp/PythonDataScienceHandbook
+
+**Scientific articles**: 
 
 Anderson, J. S., Patel, V. B., Preedy, V. R., & Martin, C. R. (2014). Cortical underconnectivity hypothesis in autism: evidence from functional connectivity MRI. Comprehensive guide to autism, 1457, 1471.
 
