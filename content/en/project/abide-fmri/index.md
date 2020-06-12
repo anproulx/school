@@ -19,11 +19,11 @@ tags: [machine learning, fMRI, autism, open science]
 
 # Summarize your project in < ~75 words. This description will appear at the top of your page and on the list page with other projects..
 
-summary: "Is autism associated with a distinct functional signature in the brain? If so, how accuratly are we able to predict the diagnosis based on fMRI data. In this project, we set out to compare different classfication algorithms and cross-validation methods to see how well each one was able to predict autism diagnosis from the resting-state fMRI data in the ABIDE dataset."
+summary: "Is autism associated with a distinct neurofunctional signature? If so, how accuratly are we able to predict the diagnosis based on fMRI data. In this project, we set out to compare different classfication algorithms and cross-validation methods to see how well each one was able to predict autism diagnosis from the resting-state fMRI data in the ABIDE dataset."
 
 # If you want to add a cover image (listpage and image in the right), add it to your directory and indicate the name
 # below with the extension.
-image: "result_cv.png"
+image: ".png"
 ---
 <!-- This is an html comment and this won't appear in the rendered page. You are now editing the "content" area, the core of your description. Everything that you can do in markdown is allowed below. We added a couple of comments to guide your through documenting your progress. -->
 
