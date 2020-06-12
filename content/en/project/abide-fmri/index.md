@@ -82,7 +82,7 @@ Visualizations:
 ## Results
 
 ### Progress overview
-The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three main elements: 1) standardized data preparation, 2) machine learning and 3) presentation. 
+The first part of this project consisted of exploring different ways in which we could organize our project as a team. We decided that our project's structure would consist of three main elements: 1) standardized data preparation, 2) machine learning 3) containerization of the working environment. 
 
 We wrote a python script to standardize the fMRI data preparation before the machine learning. Each of the team members branched off in different Jupyter Notebooks, where they ran that python script to prepare the functional data from the ABIDE dataset. Then, we  implemented different models and cross-validation techniques which are describe in further detail below. 
 
