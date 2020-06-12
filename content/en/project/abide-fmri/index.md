@@ -178,7 +178,7 @@ This file increases reproducibility by helping to ensure that the scripts run co
 8. Run the code!
  
 ## Conclusion and acknowledgement
-A special thank you to all the 2020 BrainHack School organizers for making this event an amazing and eye opening learning experience!
+A special thank you to all the 2020 BrainHack School organizers for making this event an amazing learning experience!
 
  - Pierre Bellec (Mentor)
  - Désirée Lussier-Lévesque (Mentor)
